@@ -1,4 +1,12 @@
 Need to start on project
 
-Create a Math function that randomly generates 3 numbers.
-then return those numbers as a string
+Create a function for computer choice.
+Create a function for player choice.
+
+Call the function for computer choice.
+Call the function for player choice.
+
+Compare computer choice with player choice.
+
+Create a function for winner between computer & player
+Return the result of winner
