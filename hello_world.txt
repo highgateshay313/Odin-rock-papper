@@ -1,1 +1,4 @@
 Need to start on project
+
+Create a Math function that randomly generates 3 numbers.
+then return those numbers as a string
