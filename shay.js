@@ -19,7 +19,22 @@ function playRound(com, player) {
    computer = getComputerChoice();
    players = playerChoice();
 
-   let result = `You Lose!! ${computer} beats ${players} `;
+   let result;
+   if (computer === "ROCK" && players === "SCISSORS") {
+      result = `You Lose!! ${computer} beats ${players}`
+   }else if (computer === "PAPPER" && players === "ROCK") {
+      result = `You Lose!! ${computer} beats ${players}`
+   }else if (computer === "SCISSORS" && players === "PAPPER") {
+      result = `You Lose!! ${computer} beats ${players}`
+   }else if (players === "ROCK" && computer === "SCISSORS") {
+      result = `YOU Win!! ${players} beats ${computer}`
+   }else if (players === "PAPPER" && computer === "ROCK") {
+      result = `YOU Win!! ${players} beats ${computer}`
+   }else if (players === "SCISSORS" && computer === "PAPPER") {
+      result = `YOU Win!! ${players} beats ${computer}`
+   }else{
+      result = `Its a tie!! ${computer} is the same as ${players}`
+   }
    return result
 
  }
