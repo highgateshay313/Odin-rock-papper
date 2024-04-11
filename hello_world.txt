@@ -1,6 +1,6 @@
 Need to start on project
 
-Create a function for computer choice.
+//Create a function for computer choice.
 Create a function for player choice.
 
 Call the function for computer choice.
