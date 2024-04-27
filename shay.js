@@ -4,7 +4,7 @@ function getComputerChoice() {
    let option = ["Rock", "Papper", "Scissors"]
    let choice = option[Math.floor(Math.random() * option.length)].toUpperCase();
    return choice
-}
+};
 
 //Function for user choice
 function playerChoice() {
@@ -12,7 +12,7 @@ function playerChoice() {
    //  human.toLocaleLowerCase()
     return human;
     
-}
+};
 
 //Function to play a round
 function playRound(com, player) {
@@ -64,14 +64,15 @@ function playRound(com, player) {
   
       return result, score
 
- }
+ };
 
  //Function to play a full game up to five rounds
 function playGame() {
 
  
 
-   return playRound(), playRound(), playRound(), playRound()
+   
 }
 
 console.log(playGame())
+
