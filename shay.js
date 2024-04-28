@@ -10,7 +10,7 @@ function getComputerChoice() {
    para.textContent = `Computer has selected: ${choice}!!`
    para.style.color = "white"
    para.style.textAlign = "center"
-   para.style.padding = "25px"
+   para.style.paddingTop = "25px"
    outPut.appendChild(para)
    return choice
 };
@@ -28,9 +28,9 @@ Rock.addEventListener("click", () => {
    const outPut = document.querySelector(".playersOutPut")
    const para = document.createElement("p")
    para.textContent = "Player has selected: Rock!"
-   para.style.color = "white"
+   para.style.color = "orange"
    para.style.textAlign = "center"
-   para.style.padding = "25px"
+   para.style.padding = "10px"
    outPut.appendChild(para)
 })
 
@@ -38,9 +38,9 @@ Papper.addEventListener("click", () => {
    const outPut = document.querySelector(".playersOutPut")
    const para = document.createElement("p")
    para.textContent = "Player has selected: Papper!"
-   para.style.color = "white"
+   para.style.color = "orange"
    para.style.textAlign = "center"
-   para.style.padding = "25px"
+   para.style.padding = "10px"
    outPut.appendChild(para)
 
 })
@@ -49,9 +49,9 @@ Scissors.addEventListener("click", () => {
    const outPut = document.querySelector(".playersOutPut")
    const para = document.createElement("p")
    para.textContent = "Player has selected: Scissors!"
-   para.style.color = "white"
+   para.style.color = "orange"
    para.style.textAlign = "center"
-   para.style.padding = "25px"
+   para.style.padding = "10px"
    outPut.appendChild(para)
 })
 }
