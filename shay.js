@@ -1,78 +1,64 @@
 
 //Function for computer choice
 function getComputerChoice() {
+   
    let option = ["Rock", "Papper", "Scissors"]
-   let choice = option[Math.floor(Math.random() * option.length)].toUpperCase();
+   let choice = option[Math.floor(Math.random() * option.length)];
+   
+   const outPut = document.querySelector(".playersOutPut")
+   const para = document.createElement("p")
+   para.textContent = `Computer has selected: ${choice}!!`
+   para.style.color = "white"
+   para.style.textAlign = "center"
+   para.style.padding = "25px"
+   outPut.appendChild(para)
    return choice
 };
 
+let com = getComputerChoice()
+let player = playerSelection()
+
 //Function for user choice
-function playerChoice() {
-    let human = prompt("Select: Rock, Papper, or Scissors").toUpperCase();
-   //  human.toLocaleLowerCase()
-    return human;
-    
-};
+function playerSelection() {
+   const Rock = document.querySelector(".rock")
+const Papper = document.querySelector(".papper")
+const Scissors = document.querySelector(".scissors")
 
-//Function to play a round
-function playRound(com, player) {
-   let computer = com
-   let players = player
-   
+Rock.addEventListener("click", () => {
+   const outPut = document.querySelector(".playersOutPut")
+   const para = document.createElement("p")
+   para.textContent = "Player has selected: Rock!"
+   para.style.color = "white"
+   para.style.textAlign = "center"
+   para.style.padding = "25px"
+   outPut.appendChild(para)
+})
 
-   computer = getComputerChoice();
-   players = playerChoice();
-   
-   let comScore = 0
-   let playerScore = 0
+Papper.addEventListener("click", () => {
+   const outPut = document.querySelector(".playersOutPut")
+   const para = document.createElement("p")
+   para.textContent = "Player has selected: Papper!"
+   para.style.color = "white"
+   para.style.textAlign = "center"
+   para.style.padding = "25px"
+   outPut.appendChild(para)
 
-   for (let i = 0; i < comScore, playerScore; i++) {
-      comScore = comScore + 1
-      playerScore = playerScore + 1
-   }
+})
 
-   let result;
-   if (computer === "ROCK" && players === "SCISSORS") {
-      // result = `You Lose!! ${computer} beats ${players}`;
-      comScore = comScore += 1;
-   }else if (computer === "PAPPER" && players === "ROCK") {
-      // result = `You Lose!! ${computer} beats ${players}`;
-      comScore = comScore += 1;
-   }else if (computer === "SCISSORS" && players === "PAPPER") {
-      // result = `You Lose!! ${computer} beats ${players}`;
-      comScore = comScore += 1;
-   }else if (players === "ROCK" && computer === "SCISSORS") {
-      // result = `YOU Win!! ${players} beats ${computer}`;
-      playerScore = playerScore += 1;
-   }else if (players === "PAPPER" && computer === "ROCK") {
-      // result = `YOU Win!! ${players} beats ${computer}`;
-      playerScore = playerScore += 1;
-   }else if (players === "SCISSORS" && computer === "PAPPER") {
-      // result = `YOU Win!! ${players} beats ${computer}`;
-      playerScore = playerScore += 1;
-   }else{
-      result = `Its a tie!! ${computer} is the same as ${players}`
-   }
-
-      let score;
-   if (playerScore > comScore) {
-      score = `${players} beats ${computer} You are the winner ${playerScore} ${comScore}`
-     
-   }else{
-      score = `${computer} beats ${players} You Lose!! ${comScore} ${playerScore}`
-   }
-  
-      return result, score
-
- };
-
- //Function to play a full game up to five rounds
-function playGame() {
-
- 
-
-   
+Scissors.addEventListener("click", () => {
+   const outPut = document.querySelector(".playersOutPut")
+   const para = document.createElement("p")
+   para.textContent = "Player has selected: Scissors!"
+   para.style.color = "white"
+   para.style.textAlign = "center"
+   para.style.padding = "25px"
+   outPut.appendChild(para)
+})
 }
 
-console.log(playGame())
+
+
+
+
+
 
