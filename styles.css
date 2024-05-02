@@ -1,7 +1,8 @@
 
 main {
-    background: gray;
-    height: 650px;
+    background: url(images/background-7275953_640.jpg);
+    height: 900px;
+    background-size: cover;
 }
 
 main h1 {
@@ -35,10 +36,133 @@ main h2 {
     cursor: pointer;
 }
 
-.playersOutPut {
+.outPut {
+    
     margin: 0 auto;
-    width: 70%;
-    height: 250px; background: linear-gradient(30deg, rgb(0, 0, 0), rgb(128, 0, 128));
+    width: 80%;
+    height: 450px; 
+    background: linear-gradient(30deg, rgb(0, 0, 0), rgb(128, 0, 128));
+    justify-content: center;
+}
+
+.scoreBox {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    height: 200px;
+    justify-content: center;
+}
+
+.playerScore {
+    /* display: flex; */
+    color: whitesmoke;
+    width: 30%;
+    height: 100px;
+    /* background: linear-gradient(95deg, rgb(171, 106, 40), rgb(103, 11, 137)); */
+    /* justify-content: center; */
+    margin: 50px;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
+.computerScore {
+    /* display: flex; */
+    color: whitesmoke;
+    width: 30%;
+    height: 100px;
+    /* background: linear-gradient(95deg, rgb(171, 106, 40), rgb(103, 11, 137)); */
+    justify-content: center;
+    margin: 50px;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
+.playerOutPut {
+    width: 100%;
+    height: 100px;
+    
+}
+
+.playerOutPut h4 {
+    text-align: center;
+    margin: 0;
+}
+
+.playerOutPut h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+.computerOutPut {
+    width: 100%;
+    height: 100px;
+}
+
+.computerOutPut h4 {
+    text-align: center;
+    margin: 0;
+}
+
+.computerOutPut h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+.choiceBox {
+    display: flex;
+    width: 80%;
+    height: 200px;
+    background: url(images/feather-4431599_640.jpg);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.choiceSec {
+    display: flex;
+    width: 80%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.playerChoice {
+  width: 30%;
+  margin-right: 155px;
+  background: rgb(81, 8, 117);
    
 }
+
+.playerChoice h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.computerChoice {
+   width: 30%;
+   background: rgb(81, 8, 117);
+}
+
+.computerChoice h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.winnerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+    /* background: red; */
+    margin: 0 auto;
+}
+
+
+
+
+
 

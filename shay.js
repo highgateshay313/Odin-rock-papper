@@ -1,60 +1,89 @@
+const rockBtn = document.querySelector("#rock")
+const paperBtn = document.querySelector("#paper")
+const scissorsBtn = document.querySelector("#scissors")
+const playerSelection = [rockBtn, paperBtn, scissorsBtn]
+const gameChoice = ["Rock", "Paper", "Scissors"]
+const playerPoints = document.querySelector("#playerPoints")
+const computerPoints = document.querySelector("#comPoints")
+const playerResult = document.querySelector(".first")
+const computerResults = document.querySelector(".second")
 
-//Function for computer choice
-function getComputerChoice() {
+
+
+let choice = ""
+let playerScore = 0
+let computerScore = 0
+
+let currentChoice = 0
+
+let gameChoices = gameChoice
+
+ 
+
+function playGame() {
+   let shuffelId = setInterval(computerShuffel, 150)
    
-   let option = ["Rock", "Papper", "Scissors"]
-   let choice = option[Math.floor(Math.random() * option.length)];
+   playerSelection.forEach(Option => {
+      Option.addEventListener("click", (e) => {
+         
+         clearInterval(shuffelId)
+         
+         choice = e.target.innerHTML
+         playerResult.append(choice)
+         playerResult.innerHTML = choice
+         
+         
+        
+      })
+      gameWinner()
+   })
+
+   function computerShuffel() {
+      gameChoices = gameChoice[currentChoice]
+      computerResults.append(gameChoices)
+      computerResults.innerHTML = gameChoices
+
+      if (currentChoice < gameChoice.length -1) {
+         currentChoice++;
+      }else{
+         currentChoice = 0;
+      }
+
+   }
+
+   function gameWinner() {
+      const theWinner = document.querySelector(".winnerText")
+      let champion = ""
+      theWinner.append(champion)
+         theWinner.innerHTML = champion
+
+      if (playerResult == computerResults) {
+         champion = "It's a Tie"
+      }else{
+         champion = "It works"
+      }
+   }
    
-   const outPut = document.querySelector(".playersOutPut")
-   const para = document.createElement("p")
-   para.textContent = `Computer has selected: ${choice}!!`
-   para.style.color = "white"
-   para.style.textAlign = "center"
-   para.style.paddingTop = "25px"
-   outPut.appendChild(para)
-   return choice
-};
-
-let com = getComputerChoice()
-let player = playerSelection()
-
-//Function for user choice
-function playerSelection() {
-   const Rock = document.querySelector(".rock")
-const Papper = document.querySelector(".papper")
-const Scissors = document.querySelector(".scissors")
-
-Rock.addEventListener("click", () => {
-   const outPut = document.querySelector(".playersOutPut")
-   const para = document.createElement("p")
-   para.textContent = "Player has selected: Rock!"
-   para.style.color = "orange"
-   para.style.textAlign = "center"
-   para.style.padding = "10px"
-   outPut.appendChild(para)
-})
-
-Papper.addEventListener("click", () => {
-   const outPut = document.querySelector(".playersOutPut")
-   const para = document.createElement("p")
-   para.textContent = "Player has selected: Papper!"
-   para.style.color = "orange"
-   para.style.textAlign = "center"
-   para.style.padding = "10px"
-   outPut.appendChild(para)
-
-})
-
-Scissors.addEventListener("click", () => {
-   const outPut = document.querySelector(".playersOutPut")
-   const para = document.createElement("p")
-   para.textContent = "Player has selected: Scissors!"
-   para.style.color = "orange"
-   para.style.textAlign = "center"
-   para.style.padding = "10px"
-   outPut.appendChild(para)
-})
 }
+playGame()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

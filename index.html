@@ -11,11 +11,44 @@
         <h1>Rock Paper Scissors</h1>
         <h2>Choose Your Selection</h2>
         <div class="btn-sec">
-            <button class="btn rock">Rock</button>
-            <button class="btn papper">Papper</button>
-            <button class="btn scissors">Scissors</button>
+            <button class="btn" id="rock">Rock</button>
+            <button class="btn" id="paper">Paper</button>
+            <button class="btn" id="scissors">Scissors</button>
         </div>
-        <div class="playersOutPut"></div>
+        <div class="outPut">
+            <div class="scoreBox">
+           <div class="playerScore">
+                <div class="playerOutPut">
+                    <h4>Player</h4>
+                    <h3 id="playerPoints">0</h3>
+                </div>
+                
+            </div>
+            <div class="computerScore">
+                <div class="computerOutPut">
+                    <h4>Computer</h4>
+                    <h3 id="comPoints">0</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="choiceBox">
+            <div class="choiceSec">
+        <div class="playerChoice">
+                <h1 class="first">?</h1>
+            </div>
+            <div class="computerChoice">
+                <h1 class="second">?</h1>
+            </div>
+        </div>
+     </div>
+</div>
+
+    <div class="winnerBox">
+        <div class="winnerResults">
+            <h1 class="winnerText">The winner is?</h1>
+        </div>
+    </div>
     </main>
    
 
@@ -23,3 +56,4 @@
    <script src="shay.js"></script> 
 </body>
 </html>
+
