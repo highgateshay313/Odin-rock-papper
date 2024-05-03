@@ -8,6 +8,8 @@ const computerPoints = document.querySelector("#comPoints")
 const playerResult = document.querySelector(".first")
 const computerResults = document.querySelector(".second")
 const round = document.querySelector("#roundNum")
+const player = document.querySelector(".player")
+const computer = document.querySelector(".computer")
 
 
 
@@ -25,11 +27,13 @@ let gameChoices = gameChoice
 
 function playGame() {
    let shuffelId = setInterval(computerShuffel, 150)
-
+   
    
    playerSelection.forEach(Option => {
       Option.addEventListener("click", (e) => {
+         
          round.textContent = rounds++
+         
 
       
          clearInterval(shuffelId)
@@ -37,6 +41,13 @@ function playGame() {
          playerChoice = e.target.textContent
          // playerResult.append(playerChoice)
          playerResult.textContent = playerChoice
+         if (rounds > 1) {
+            computerShuffel()
+         }
+         // if (rounds === 5) {
+         //    gameOver()
+         // }
+         
 
          gameWinner()
          
@@ -82,12 +93,29 @@ function playGame() {
       playerPoints.textContent = playerScore
       computerPoints.textContent= computerScore
       theWinner.textContent = champion;
+      gameOver()
+   }
+
+   function gameOver() {
+
+      if (playerScore === 5 || computerScore === 5) {
+         let champion = ""
+         rounds = 0
+         playerScore = 0
+         computerScore = 0
+
+         champion = `You are the game Champion!! ${player} Wins! || ${computer} Wins!`
+         playerResult.textContent = "?"
+         computerResults.textContent = "?"
+      }
+      
+
    }
 
  
    
 }
-playGame(5)
+playGame()
 
 
 
