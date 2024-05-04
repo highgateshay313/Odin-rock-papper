@@ -99,12 +99,24 @@ function playGame() {
    function gameOver() {
 
       if (playerScore === 5 || computerScore === 5) {
+         const theWinner = document.querySelector(".winnerText")
          let champion = ""
-         rounds = 0
+         let player = "Player"
+         let computer = "Computer"
+
+        if (playerScore === 5){
+         champion = `${player} Wins!! - You are the Champion!!`
+        }
+
+        if (computerScore === 5) {
+         champion = `${computer} Wins - You Lose!!`
+        }
+         rounds = 1
          playerScore = 0
          computerScore = 0
 
-         champion = `You are the game Champion!! ${player} Wins! || ${computer} Wins!`
+         // champion = `You are the game Champion!! ${player} Wins! || ${computer} Wins!`
+         theWinner.textContent = champion
          playerResult.textContent = "?"
          computerResults.textContent = "?"
       }
